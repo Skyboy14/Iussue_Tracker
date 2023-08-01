@@ -1,4 +1,4 @@
-# Iussue_Tracker
+# Issue_Tracker
 Issue Tracker is built using Node Js, Express, and Mongo DB
 
 URL FOR DEMO:: http://ec2-44-202-228-133.compute-1.amazonaws.com:8000/create_issue/64c8eef4f0ffacde9db9557b
