@@ -1,0 +1,38 @@
+<div class="maincontainer2">
+    <p class="title2">Create Issue</p>
+    <form id="form-create" action="" method="POST">
+        <div class="cover2">
+            <div class="unit2">
+                <p class="label2">Project: <span class="label2" ><%- project.projectName %></span></p>
+            </div>
+
+            <div class="unit2">
+                <label class="label2">Issue</label>
+                <input type="text" name="title" class="projectName2" placeholder="Issue" required>
+            </div>
+            <div class="unit2">
+                <label class="label2">Short Description</label>
+                <textarea name="description" placeholder="Description"  class="description2"></textarea>
+            </div>
+            <div class="unit2">
+                <label class="label2" id="labelDropdown">Label:</label>
+                <select name="label" id="label" >
+                    <option class="option" value="UI error">UI error</option>
+                    <option class="option" value="">Type Error</option>
+                    <option class="option" value="Logic Error">Logic Error</option>
+                    <option class="option" value="Requriment Change">Requriment Change</option>
+                </select>
+            </div>
+            
+            <div class="unit2">
+                <label class="label2">Author's Name</label>
+                <input type="text" name="author" placeholder="Author's Name" class="author2" required>
+            </div>
+        
+            <div class="create-button2">
+                <input type="submit" value="Create Issue" >
+            </div>
+        
+        </div>
+    </form>
+</div>

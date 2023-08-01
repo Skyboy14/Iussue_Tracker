@@ -1,0 +1,39 @@
+<!-- Home Page Container -->
+<div class="container">
+  <div class="aSide">
+    <p class="heading">What we offer</p>
+    <div class="purpose" >
+      Our issue tracker App is use for efficiently manages and prioritizes tasks, problems, and improvements within a project, fostering collaboration, accountability, and communication among team members. It streamlines issue resolution, tracks progress, and provides historical data for analysis, ensuring a more organized and productive workflow.
+    </div>
+
+    <div class="addProject">
+      <a href="create_project"> 
+        Create Project<i class="fa-solid fa-plus"></i>
+      </a>
+    </div>
+    
+    
+  </div>
+
+
+  <div class="bSide">
+    <div class="projectList">
+      <div class="title">
+          Projects Listed
+      </div>
+    
+      <!-- Rendering all the projects using forEach loop -->
+      <% allProjects.forEach((project)=>{ %>
+        <div class="projectUnit">
+          <a class="projectDetails" href="project_details/<%- project.id %>">
+            <p><%- project.projectName %></p>
+          </a>
+          <div class="bugShow">            
+              Bug: <div class="listedBug"> <%- project.issues.length %></div>
+          </div>
+        </div>
+      <% }) %> 
+      
+    </div>
+  </div>
+</div>

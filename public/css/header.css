@@ -1,0 +1,19 @@
+.headerTitle{
+    text-decoration: none;
+    color: white;
+    font-size: 32px;
+    padding: 10px;
+}
+
+.alternativeText{
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+}
+
+.header{
+    background-color: black;
+    display: flex;
+    justify-content: space-between
+}

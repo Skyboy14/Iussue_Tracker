@@ -1,0 +1,111 @@
+<div class="container1">
+  <div class="aSide1">
+      <p class="title1">Project Details</p>
+
+      <div>
+        <div class="projectName1">
+          <p>
+            Project Name: <span><%- project.projectName %></span>
+          </p>
+        </div>
+        <div class="description1" >Description</div>
+        <div  class="description11"><%- project.description %></div>
+        <div class="autherName1">
+          <p>
+            Author: <span><%- project.author %></span>
+          </p>
+        </div>
+        <div class="newIssueBtn1">
+          <a href="../create_issue/<%- project.id %>">
+            Create New Issue
+          </a>
+        </div>
+      </div>
+  </div>
+
+
+  <div class="bSide1">
+
+  <div  id="functionality" >
+    <div>
+
+      <!-- Bug filter  -->
+      <div id="filterSection">
+
+        <div  class="title3">Issue Search</div>
+
+        <!-- filter by description search  -->
+        <div id="searchSection" class="searchSection3">
+          <div>
+            <button class="searchButton"id="searchButton" style="min-width: 110px;">Search</button>
+            <input id="searchBar" class="searchBar" type="text" placeholder="Description..." />            
+          </div>
+        </div>
+
+
+        <!-- filter by type of bug  -->
+        <div  class="filter3">
+
+          <button class="filterButton" id="filterButton" style="min-width: 110px;">Filter</button>
+
+          <input type="checkbox" id="uierror" value="UI error" />
+          <label for="uierror" class="labelCheckbox">UI error</label>
+
+          <input type="checkbox" id="typeError" value="Type Error" />
+          <label for="typeError" class="labelCheckbox">Type Error</label>
+
+          <input type="checkbox" id="logicError" value="Logic Error" />
+          <label for="logicError" class="labelCheckbox">Logic Error</label>
+
+          <input type="checkbox" id="requrimentChange" value="Requriment Change" />
+          <label for="requrimentChange" class="labelCheckbox">Requriment Change</label>
+
+        </div>
+      </div>
+
+
+      <!-- filter by author of bug  -->
+      <div id="filterSectionByAuthor" >
+        <div id="authorsList" >
+          <button  id="filterButtonByAuthor" style="min-width: 110px;">Filter By Author</button>
+          <% if(project.issues.length > 0 ){ %>
+            <select name="" id="label" class="authorselect" >
+            <% project.issues.forEach((issue)=>{ %>
+                <option class="option" value="<%- issue.issueAuthor%>"><%- issue.issueAuthor%></option>
+              <% }) %> 
+            </select>
+          <% } else{ %>  
+            <select name="" id="" class="authorselect">
+              <option value="create issue">No Author</option>
+            </select>
+          <% } %>            
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- Bug Section -->
+    <div id="bugSection" class="bugCard1">
+      <% if(project.issues.length > 0 ){ %>
+        <!-- Rendering bugs based on search result -->
+          <% project.issues.forEach((issue)=>{ %>
+              <div >
+                  <div class="bugCardtitle">Title: <span ><%- issue.title %></span></div>
+                  <div class="bugCardtitle">Description: <span ><%- issue.description %></span</div>
+                  <div class="bugCardtitle">Label: <span ><%- issue.label %></span></div>
+                  <div class="bugCardtitle">Author: <span > <%- issue.issueAuthor %></span></div>
+              </div>
+              <hr>
+            <% }) %> 
+        <% } else{ %>  
+          <h1 class="bugCardnoIssueFound">No Issues Found</h1>
+        <% } %>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<!-- To grab data in js file -->
+<input type="hidden" id="dataFromServer" value="<%= JSON.stringify(project) %>">
+

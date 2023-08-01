@@ -1,0 +1,27 @@
+{
+  "name": "issue_tracker",
+  "version": "1.0.0",
+  "description": "issue tracker app records the issues and bugs in projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "issue-tracker"
+  ],
+  "author": "akash_yadav",
+  "license": "ISC",
+  "dependencies": {
+  "body-parser": "^1.20.2",
+  "ejs": "^3.1.9",
+  "express": "^4.18.2",
+  "express-async-handler": "^1.2.0",
+  "express-ejs-layouts": "^2.5.1",
+  "mongoose": "^7.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}

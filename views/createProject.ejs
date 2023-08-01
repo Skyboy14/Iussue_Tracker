@@ -1,0 +1,27 @@
+
+<div class="maincontainer">
+    <p class="title">Create Project</p>
+
+    <form id="form-create" action="/create_project" method="POST">
+        <div class="cover">
+            <div class="unit">
+                <label class="label">Project's Name</label>
+                <input type="text" name="projectName" class="projectName" placeholder="Project's Name" required>
+            </div>
+            <div class="unit">
+                <label class="label">Short Description</label>
+                <textarea name="description" placeholder="Description"  class="description"></textarea>
+            </div>
+            <div class="unit">
+                <label class="label">Author's Name</label>
+                <input type="text" name="author" placeholder="Author's Name" class="author" required>
+            </div>
+        
+            <div class="create-button">
+                <input type="submit" value="Add Project" >
+            </div>
+            
+
+        </div>
+    </form>
+</div>
