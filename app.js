@@ -1,4 +1,6 @@
 const express = require("express");
+const app = express();
+const port = 8083;
 const expressLayouts = require("express-ejs-layouts");
 const path = require("path");
 
@@ -8,9 +10,6 @@ const expressBodyParser = require("express");
 
 const session = require("express-session");
 const MongoStore = require("connect-mongo");
-
-const app = express();
-const port = 8083;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -24,8 +23,6 @@ app.set("layout", "./layouts/_Mainlayout");
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
-
-app.use("/", require("./routes/projectRouter"));
 
 app.use(
   session({
@@ -48,6 +45,9 @@ app.use(
     ),
   })
 );
+
+// Routes
+app.use("/", require("./routes/projectRouter"));
 
 //port testing
 app.listen(port, function (err) {
