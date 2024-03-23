@@ -21,7 +21,8 @@
     "express-ejs-layouts": "^2.5.1",
     "mongoose": "^7.3.1",
     "express-session": "^1.17.3",
-    "mongo-store": "^0.0.2"
+    "mongo-store": "^0.0.2",
+    "connect-mongo": "^5.0.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.22"
