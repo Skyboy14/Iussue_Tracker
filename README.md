@@ -1,7 +1,7 @@
 # Issue_Tracker
 Issue Tracker is built using Node Js, Express, and Mongo DB
 
-URL FOR DEMO:: http://ec2-44-202-228-133.compute-1.amazonaws.com:8000/create_issue/64c8eef4f0ffacde9db9557b
+URL FOR DEMO:: 
 
 Home Page || Issue Tracker Landing Page where you can see the purpose of the Issue tracker App and
 list of projects added to the app with the bugs of respective projects Also we are able to see the 
