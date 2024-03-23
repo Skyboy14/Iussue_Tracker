@@ -1,10 +1,6 @@
-
-
 // data from ejs to js file
 const dataFromServer = document.getElementById("dataFromServer");
-const dataParse = JSON.parse(dataFromServer.value);
-
-
+const dataParse = dataFromServer ? JSON.parse(dataFromServer.value) : [];
 
 // Function to display issues after filtering
 const bugDisplay = document.getElementById("bugSection");
@@ -33,52 +29,50 @@ function sortFunction(arr) {
   }
 }
 
-
-
 // Filter Issue by searching by title or description
-const searchBtn = document.getElementById("searchButton")
-searchBtn.addEventListener("click", function () {
-  const searchValue = document.getElementById("searchBar").value.toLowerCase().trim()
-  const filtered = dataParse.issues.filter((issue) => issue.title.toLowerCase().includes(searchValue) || issue.description.toLowerCase().includes(searchValue))
-  sortFunction(filtered)
-})
-
+const searchBtn = document.getElementById("searchButton");
+searchBtn &&
+  searchBtn.addEventListener("click", function () {
+    const searchValue = document
+      .getElementById("searchBar")
+      .value.toLowerCase()
+      .trim();
+    const filtered = dataParse.issues.filter(
+      (issue) =>
+        issue.title.toLowerCase().includes(searchValue) ||
+        issue.description.toLowerCase().includes(searchValue)
+    );
+    sortFunction(filtered);
+  });
 
 // Filter Issue by Author
 const filterBtnByAuthor = document.getElementById("filterButtonByAuthor");
-filterBtnByAuthor.addEventListener("click", function () {
-  const optionValue = document.getElementById("label");
-  const author = dataParse.issues.filter(
-    (issue) => issue.issueAuthor === optionValue.value
-  );
-  sortFunction(author);
-});
-
-
-
+filterBtnByAuthor &&
+  filterBtnByAuthor.addEventListener("click", function () {
+    const optionValue = document.getElementById("label");
+    const author = dataParse.issues.filter(
+      (issue) => issue.issueAuthor === optionValue.value
+    );
+    sortFunction(author);
+  });
 
 // Filter Issue by Label
 const filterBtn = document.getElementById("filterButton");
-filterBtn.addEventListener("click", function () {
-  const filteredArr = [];
+filterBtn &&
+  filterBtn.addEventListener("click", function () {
+    const filteredArr = [];
 
-  const checkBoxes = document.querySelectorAll("input[type='checkbox']");
+    const checkBoxes = document.querySelectorAll("input[type='checkbox']");
 
-  for (let i = 0; i < checkBoxes.length; i++) {
-    if (checkBoxes[i].checked) {
-      console.log(checkBoxes[i].checked);
-      for (let j = 0; j < dataParse.issues.length; j++) {
-        if (dataParse.issues[j].label === checkBoxes[i].value) {
-          filteredArr.push(dataParse.issues[j]);
+    for (let i = 0; i < checkBoxes.length; i++) {
+      if (checkBoxes[i].checked) {
+        console.log(checkBoxes[i].checked);
+        for (let j = 0; j < dataParse.issues.length; j++) {
+          if (dataParse.issues[j].label === checkBoxes[i].value) {
+            filteredArr.push(dataParse.issues[j]);
+          }
         }
       }
     }
-  }
-  sortFunction(filteredArr);
-});
-
-
-
-
-
-
+    sortFunction(filteredArr);
+  });
