@@ -1,110 +1,108 @@
-body{
-    margin: 0;
+body {
+  margin: 0;
 }
 .container {
-    display: flex;
-    flex-direction: row;
-    height: 90vh;
-    flex-wrap: nowrap;
-    align-items: flex-start;
-    justify-content: space-around;
-    background-image: url('../assets/pexels-pixabay-372787.jpg');
+  display: flex;
+  flex-direction: row;
+  height: 90vh;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: space-around;
+  background-image: url("../assets/img3.jpg");
 }
-.aSide{
-    width: 60%;
-    margin-top: 50px;
+.aSide {
+  width: 60%;
+  margin-top: 50px;
 }
-.bside{
-    width: 40%;
-}
-
-.projectList{
-    background-color: lightblue;
-    padding: 20px;
-    margin-top: 50px;
-    border: 2px solid darkblue;
-    border-radius: 10px;
-    min-width: 150px;
-}
-.title{
-    font-size: 24px;
-    font-weight: 600;
-    padding-bottom: 10px;
-}
-.projectUnit{
-    display: flex;
-    justify-content: space-between;
-    background-color: wheat;
-    padding: 4px 15px;
-    margin-bottom: 10px;
-    border-radius: 10px;
-    align-items: center;
-    
-}
-.projectDetails{
-    text-transform: uppercase;
-    text-decoration: none;
-    font-size: medium;
-    font-weight: 600;
-    color: black;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding-right: 20px;
-}
-.listedBug{
-    background-color: red;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+.bside {
+  width: 40%;
 }
 
-.heading{
-    font-size: xx-large;
-    font-style: revert;
-    font-weight: 700;
-    padding-bottom: 20px;
-
+.projectList {
+  background-color: lightblue;
+  padding: 20px;
+  margin-top: 50px;
+  border: 2px solid darkblue;
+  border-radius: 10px;
+  min-width: 150px;
+}
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  padding-bottom: 10px;
+}
+.projectUnit {
+  display: flex;
+  justify-content: space-between;
+  background-color: wheat;
+  padding: 4px 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  align-items: center;
+}
+.projectDetails {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: medium;
+  font-weight: 600;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-right: 20px;
+}
+.listedBug {
+  background-color: red;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
-.purpose{
-    padding: 10px;
-    background-color: antiquewhite;
-    font-size: larger;
-    letter-spacing: 0.9px;
-    font-family: ui-monospace;
-    border-radius: 10px;
-    opacity: 0.9;
+.heading {
+  font-size: xx-large;
+  font-style: revert;
+  font-weight: 700;
+  padding-bottom: 20px;
 }
 
-.addProject{
-    margin-top: 30px;
-    background: cornflowerblue;
-    width: max-content;
-    padding: 10px;
-    border-radius: 30px;
+.purpose {
+  padding: 10px;
+  background-color: antiquewhite;
+  font-size: larger;
+  letter-spacing: 0.9px;
+  font-family: ui-monospace;
+  border-radius: 10px;
+  opacity: 0.9;
+}
+
+.addProject {
+  margin-top: 30px;
+  background: cornflowerblue;
+  width: max-content;
+  padding: 10px;
+  border-radius: 30px;
 }
 .addProject:hover {
-    zoom: 1.2;
+  zoom: 1.2;
 }
 
-.addProject > a{
-    text-decoration: none;
-    color: brown;
-    font-size: larger;
-    font-weight: 700;
+.addProject > a {
+  text-decoration: none;
+  color: brown;
+  font-size: larger;
+  font-weight: 700;
 }
 
-.addProject > a > i{
-    padding: 0 5px;
+.addProject > a > i {
+  padding: 0 5px;
 }
 
-.bugShow{
-    display: flex;
-    align-items: center;
+.bugShow {
+  display: flex;
+  align-items: center;
 }
