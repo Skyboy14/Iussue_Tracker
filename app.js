@@ -24,6 +24,28 @@ app.set("view engine", "ejs");
 
 app.use("/", require("./routes/projectRouter"));
 
+app.use(
+  session({
+    name: "IsusseTracker",
+    secret: "IssuseTracker",
+    saveUninitialized: false,
+    resave: false,
+    cookie: {
+      maxAge: 1000 * 60 * 100,
+    },
+    store: MongoStore.create(
+      {
+        mongoUrl:
+          "mongodb://atlas-sql-65febe290d33e16c2a80b004-fmx0u.a.query.mongodb.net/test?ssl=true&authSource=admin",
+        autoRemove: "disabled",
+      },
+      (err) => {
+        console.log(err);
+      }
+    ),
+  })
+);
+
 //port testing
 app.listen(port, function (err) {
   if (err) {
