@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 mongoose.connect(
-  "mongodb://atlas-sql-65febe290d33e16c2a80b004-fmx0u.a.query.mongodb.net/test?ssl=true&authSource=admin"
+  "mongodb+srv://yadavakash224ay:rTQ60PwDJCHYJ8Jf@cluster0.vhw9s31.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 );
 
 const db = mongoose.connection;
